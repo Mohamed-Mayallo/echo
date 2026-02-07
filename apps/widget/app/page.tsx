@@ -1,6 +1,5 @@
 import { add } from "@workspace/math/add"
 import { Button } from "@workspace/ui/components/button"
-import { Input } from "@workspace/ui/components/input"
 
 export default function Page() {
   return (
@@ -10,8 +9,7 @@ export default function Page() {
         <div className="flex gap-2">
           <Button>Button</Button>
           <Button variant="outline">Outline</Button>
-          <div>{add(1, 2)}</div>
-          <Input type="text" placeholder="Input" />
+          <div>{add(2, 2)}</div>
         </div>
       </div>
     </div>
