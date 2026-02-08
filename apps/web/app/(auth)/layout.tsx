@@ -1,5 +1,7 @@
-import { SignUp } from "@clerk/nextjs";
+import { AuthLayout } from "../modules/auth/ui/layouts/auth-layout";
 
-export default function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <div className="flex items-center justify-center min-h-screen">{children}</div>;
+function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <AuthLayout>{children}</AuthLayout>;
 }
+
+export default Layout;
