@@ -14,6 +14,7 @@ import {
   SidebarGroupContent,
   Sidebar,
 } from "@workspace/ui/components/sidebar";
+import { cn } from "@workspace/ui/lib/utils";
 import { Palette, Blocks, Mic, CreditCard, InboxIcon, LibraryBigIcon } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -112,7 +113,15 @@ export const DashboardSidebar = () => {
               <SidebarMenu>
                 {group.items.map((item) => (
                   <SidebarMenuItem key={item.name}>
-                    <SidebarMenuButton asChild isActive={isActive(item.url)} tooltip={item.name}>
+                    <SidebarMenuButton
+                      asChild
+                      className={cn(
+                        isActive(item.url) &&
+                          "bg-gradient-to-b from-sidebar-primary to-[#0b63f3]! text-sidebar-primary-foreground! hover:to-[#0b63f3]/90!",
+                      )}
+                      isActive={isActive(item.url)}
+                      tooltip={item.name}
+                    >
                       <Link href={item.url}>
                         <item.icon className="size-4!" />
                         <span>{item.name}</span>
