@@ -111,7 +111,7 @@ export const WidgetLoading = () => {
   }, [isValidSession, isValidOrganization, setScreen, step, setStep]);
 
   return (
-    <div className="flex flex-col grow justify-center items-center gap-4 p-4 bg-error text-whitew-full h-full">
+    <div className="flex flex-col grow justify-center items-center gap-4 p-4 bg-error text-white w-full h-full">
       <Loader className="size-12 animate-spin" />
 
       <p className="max-w-md text-center">{loadingMessage ?? "Loading ..."}</p>
