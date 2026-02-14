@@ -6,12 +6,15 @@ import { WidgetHeader } from "../ui/widget-header";
 import { useAtomValue, useSetAtom } from "jotai";
 import { WidgetError } from "../ui/widget-error";
 import { WidgetLoading } from "../ui/widget-loading";
+import { WidgetChat } from "../ui/widget-chat";
+import { WidgetSelection } from "../ui/widget-selection";
 
 const screens: Record<WidgetScreen, React.JSX.Element> = {
   auth: <WidgetAuth />,
   loading: <WidgetLoading />,
   error: <WidgetError />,
-  selection: <>Selection</>,
+  selection: <WidgetSelection />,
+  chat: <WidgetChat />,
 };
 
 export const WidgetView = ({ organizationId }: { organizationId: string }) => {

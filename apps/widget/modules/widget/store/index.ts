@@ -5,7 +5,7 @@ import { atomFamily } from "jotai-family";
 
 export const organizationIdAtom = atom<string | null>(null);
 
-export type WidgetScreen = "auth" | "loading" | "error" | "selection";
+export type WidgetScreen = "auth" | "loading" | "error" | "selection" | "chat";
 
 export const screenAtom = atom<WidgetScreen>("loading");
 
@@ -16,3 +16,7 @@ export const sessionIdAtomFamily = atomFamily((organizationId: string) => {
 export const sessionErrorAtom = atom<string | null>(null);
 
 export const sessionLoadingMessageAtom = atom<string | null>(null);
+
+export const sessionConversationId = atom<Id<"conversations"> | null>(null);
+
+export const conversationThreadId = atom<string | undefined>(undefined);
