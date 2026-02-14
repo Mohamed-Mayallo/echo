@@ -17,5 +17,6 @@ Sentry.init({
   // https://docs.sentry.io/platforms/javascript/guides/nextjs/configuration/options/#sendDefaultPii
   sendDefaultPii: true,
 
-  enabled: process.env.NODE_ENV === "production",
+  enabled: false,
+  // enabled: process.env.NODE_ENV === "production",
 });

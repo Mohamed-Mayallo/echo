@@ -8,6 +8,11 @@
  * @module
  */
 
+import type * as contactSessions_actions from "../contactSessions/actions.js";
+import type * as contactSessions_mutations from "../contactSessions/mutations.js";
+import type * as contactSessions_queries from "../contactSessions/queries.js";
+import type * as organizations_actions from "../organizations/actions.js";
+import type * as schema_contactSessions from "../schema/contactSessions.js";
 import type * as schema_users from "../schema/users.js";
 import type * as users_mutations from "../users/mutations.js";
 import type * as users_queries from "../users/queries.js";
@@ -19,6 +24,11 @@ import type {
 } from "convex/server";
 
 declare const fullApi: ApiFromModules<{
+  "contactSessions/actions": typeof contactSessions_actions;
+  "contactSessions/mutations": typeof contactSessions_mutations;
+  "contactSessions/queries": typeof contactSessions_queries;
+  "organizations/actions": typeof organizations_actions;
+  "schema/contactSessions": typeof schema_contactSessions;
   "schema/users": typeof schema_users;
   "users/mutations": typeof users_mutations;
   "users/queries": typeof users_queries;
